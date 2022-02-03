@@ -8,7 +8,7 @@ float func_media(int v[10]);
 int main (){
 
 int v[10], *cubo, quad, inversa, separa;
-float media;
+float avg;
 
     for (int i = 0; i < 10; i++){
         printf("Digite números inteiros positivos [%d de 10]: ", i+1);
@@ -20,9 +20,9 @@ float media;
 
     separa = func_separa(v);
     inversa = func_inversa(v);
-    media = func_media(v);
+    avg = func_media(v);
 
-    printf("\nA média dos valores do vetor é: %.2f\n", media);
+    printf("\nA média dos valores do vetor é: %.2f\n", avg);
 
     cubo = func_cubo(v);
 
@@ -103,13 +103,13 @@ int par[10], impar[10];
 float func_media(int v[10]){
 
 float soma = 0;
-float media;
+float avg;
 
     for (int i = 0; i < 10; i++)
         soma += v[i];
 
-    media = soma / 10;
+    avg = soma / 10;
 
-    return media;
+    return avg;
 
 }
